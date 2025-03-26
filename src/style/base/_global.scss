@@ -1,0 +1,50 @@
+// Paramètres de base de tout le site
+@use "./variables";
+@use './mixins';
+
+* {
+    margin: 0;
+  }
+  
+html{
+  height:100%
+}
+
+/* #root{
+  padding-bottom: 200px;
+} */
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  min-height:100vh;
+  padding-bottom: 180px;
+  position: relative;
+  padding: 20px 80px;
+  @include mixins.mobile {
+    padding: 20px 20px;
+  }
+}
+
+h1{
+  font-size: 38px;
+  color: white;
+  @include mixins.tablet {
+    font-size: 32px;
+  }
+  @include mixins.mobile {
+    font-size: 28px;
+  }
+}
+
+h2{
+  font-size: 24px;
+  color: variables.$primary-color;
+  font-weight: 500;
+}
+ 

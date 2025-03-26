@@ -1,0 +1,15 @@
+@use '../base/mixins';
+
+.maincontent{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 150px;
+    margin-top: 15px;
+    @include mixins.mobile {
+        margin-top: 0;
+        margin-bottom: 130px;
+        width: 100%;
+    }
+}

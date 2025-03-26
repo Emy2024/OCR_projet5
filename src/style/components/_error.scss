@@ -1,0 +1,31 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.containerError{
+    width: 100%;
+    text-align: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__404{
+        font-size: 180px;
+        font-weight: 700;
+        color: variables.$primary-color;
+        @include mixins.mobile {
+            font-size: 136px;
+        }
+    
+    }
+
+    &__text{
+        font-size: 20px;
+        font-weight: 500;
+        color: variables.$primary-color;
+    }
+
+    &__link{
+        margin-top: 40px;
+        color: black;
+    }
+}

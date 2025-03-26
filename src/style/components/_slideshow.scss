@@ -1,0 +1,66 @@
+@use '../base/mixins';
+
+.slideshow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 300px;
+    padding: 20px 0 20px 0;
+    margin: 15px;
+    position: relative;
+
+    &__legend {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        z-index: 11;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        @include mixins.mobile {
+            visibility: hidden;
+        }
+    }
+
+    &__pictures {
+        border-radius: 15px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 40%;
+        font-size: 70px;
+        z-index: 10;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+
+        @include mixins.mobile {
+            top: 50% !important;
+            font-size: 30px !important;
+        }
+
+        &__left {
+            left: 3%;
+        }
+
+        &__right {
+            right: 3%;
+        }
+    }
+}
+
+.hide{
+    display: none;
+}

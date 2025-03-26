@@ -1,0 +1,43 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
+    background-color: variables.$grey_transparent;
+    padding: 15px;
+    margin-bottom: 165px;
+    margin-top: 15px;
+
+    @include mixins.tablet {
+        padding: 10px;
+    }
+
+    @include mixins.mobile {
+        padding: 0;
+        background-color:rgba(0, 0, 0, 0);
+    }
+
+    &__individualCard{
+        display: flex;
+        flex-direction: column;
+        position: relative; 
+        margin: 22px;
+        @include mixins.tablet {
+            margin: 10px;   
+        }
+    
+        @include mixins.mobile {
+            width: 100%;
+        }
+    }
+}
+

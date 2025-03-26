@@ -1,0 +1,38 @@
+@use "../base/mixins";
+
+.banner{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 200px;
+    padding: 20px 0 20px 0;
+    @include mixins.mobile {
+        position: relative;
+    }
+    @include mixins.mobile {
+        height: 117px;
+    }
+
+    &__image {
+        border-radius: 15px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: relative;
+        filter: brightness(50%);
+    }
+
+    &__text {
+        position: absolute;
+        z-index: 2;
+        color: white;
+        text-shadow: 1px 1px 2px black;
+        @include mixins.mobile {
+            text-align: left;
+            position: absolute;
+            left: 25px;
+        }
+    }
+}

@@ -1,0 +1,196 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.pageLogement{
+    margin-bottom: 200px;
+    @include mixins.mobile {
+        margin-bottom: 150px;
+    }
+}
+
+.slideshow {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 300px;
+    padding: 20px 0 20px 0;
+    margin: 15px;
+    position: relative;
+    @include mixins.mobile {
+        margin: 15px 0 15px 0;
+    }
+
+    &__pictures {
+        border-radius: 15px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+    }
+
+    &__legend {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        z-index: 11;
+        position: absolute;
+        bottom: 10%;
+        text-align: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+    }
+}
+
+
+.slideshow__icon {
+    position: absolute;
+    top: 40%;
+    font-size: 70px;
+    z-index: 10;
+    color: rgb(255, 255, 255);
+
+    &__left {
+        left: 3%;
+    }
+
+    &__right {
+        right: 3%;
+    }
+}
+
+
+.information{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    @include mixins.mobile {
+        flex-direction: column;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        @include mixins.mobile {
+            width: 100%;
+        }
+    }
+    &__sidecontent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        width: 20%;
+        @include mixins.tablet {
+            width: 50%;
+        }
+        @include mixins.mobile {
+            flex-direction: row;
+            width: 100%;
+            align-content: center;
+            align-items: stretch;
+        }
+    }
+}
+
+.headerContainer__p{
+    padding-top: 5px;
+}
+
+.headerTagname {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.sidecontent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+    @include mixins.mobile {
+        order: 2;
+        width: 68%;
+    }
+
+    &__Name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 0 15px 10px 15px;
+        color: variables.$primary-color;
+        font-size: 16px;
+        text-align: right;
+        gap: 5px;
+        width: 50%;
+        @include mixins.mobile {
+            width: 40%;
+            padding-right: 0px;
+        }
+    }
+
+    &__Image{
+        display: flex;
+        justify-content: flex-start;
+        width: 60%;
+        margin-bottom: 15px;
+        @include mixins.mobile {
+            justify-content: flex-end;
+            width: 46%;
+        }
+    }
+}
+
+
+.hostImage{
+    display: flex;
+    flex-direction: row;
+    border-radius: 50%;
+    width: 70%;
+}
+
+.sidecontent__Stars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 15px;
+    @include mixins.mobile {
+        order:1;
+        justify-content: flex-start;
+        padding-right: 0;
+    }
+}
+
+
+.accordionsContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 15px;
+    justify-content: space-between;
+    @include mixins.mobile {
+        flex-direction: column;
+    }
+}
+
+.description{
+    width: 47%;
+    @include mixins.mobile {
+        width: 100%;
+    }
+}
+
+.equipement{
+    width: 47%;
+    @include mixins.mobile {
+        width: 100%;
+    }
+}
+
+

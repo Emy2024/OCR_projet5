@@ -1,0 +1,65 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  background-color: variables.$white-color;
+  
+  &__logo {
+    width: 100%;
+    @include mixins.mobile {
+      width: 75%;
+    }
+  }
+}
+
+.navbar {
+  margin-left: auto;
+  @include mixins.tablet{
+    display: flex;
+    justify-content: flex-end;
+  }
+  @include mixins.mobile {
+    width: 80%;
+  }
+
+  &__link {
+    margin-left: 45px;
+    margin-right: 45px;
+    color: black;
+
+    @include mixins.tablet {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    @include mixins.mobile {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+
+  &__linkActive {
+    text-decoration: underline;
+  }
+  
+  &__linkInactive {
+    text-decoration: none;
+  }
+
+    @include mixins.mobile {
+      margin-left: 10px;
+      text-transform: uppercase;
+    }
+  
+}
+
+
+
+
+
+
+
