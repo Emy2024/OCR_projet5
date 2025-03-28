@@ -3,8 +3,6 @@ import Card from '../../components/Card'
 import picture_ocean from '../../assets/vue_ocean.webp'
 import data from '../../data/logements.json'
 import { Link } from 'react-router'
-import "../../style/components/_card.scss"
-
 
 function Home() {
     return (

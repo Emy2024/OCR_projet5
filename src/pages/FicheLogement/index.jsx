@@ -4,7 +4,6 @@ import Tagname from "../../components/Tagname"
 import Accordion from "../../components/Accordion";
 import Slideshow from "../../components/Slideshow"
 import data from "../../data/logements.json"
-import "../../style/page/_ficheLogement.scss"
 import Star from "../../components/Star"
 
 function Fichelogement(){
