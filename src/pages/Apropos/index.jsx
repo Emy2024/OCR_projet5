@@ -9,7 +9,8 @@ function Apropos() {
         <>
             <Banner 
                 alt={"Photographie d'une montagne et d'un lac"}       
-                src={picture_mountain}        
+                src={picture_mountain}
+                name=" "   
             />
             
             <div className="maincontent">

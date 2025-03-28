@@ -55,7 +55,7 @@ function Fichelogement(){
                             <span>{hostNameSplit[1]}</span>
                         </div>
                         <div className="sidecontent__Image">
-                            <img className="hostImage" src={hostPicture}></img>
+                            <img className="hostImage" src={hostPicture} alt="Photographie du propriétaire"></img>
                         </div>
                     </div>
                     <div className="sidecontent__Stars">

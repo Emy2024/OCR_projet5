@@ -26,7 +26,7 @@ function Accordion(props){
 
     return(
         <div className={classAccordion()}>
-            <button className="accordion__button">
+            <div className="accordion__button">
                 {props.title}
                 <div className='accordion__icon-container'>
                     <div className={classIcon()}
@@ -35,7 +35,7 @@ function Accordion(props){
                     {iconChevron}
                     </div>
                 </div>
-            </button>
+            </div>
             <div className={`accordion__panel ${isPanelVisible ? "accordion__panelVisible" : "accordion__panelHidden"}`}>
                 {Array.isArray(props.content) ? 
                     props.content.map((item, index) => {

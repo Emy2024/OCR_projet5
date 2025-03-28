@@ -69,7 +69,7 @@ function Slideshow(props){
                     {iconChevronRight}
                 </div> 
             </div>
-             <img className="slideshow__pictures" src={props.tabImages[currentIndex]}></img>  
+             <img className="slideshow__pictures" src={props.tabImages[currentIndex]} alt="appartement à louer"></img>  
         </div>
     )
 }
