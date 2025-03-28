@@ -11,7 +11,7 @@ function Header(){
   return (
     <div className="header">
       <Link to="/">
-        <img className="header__logo" src={LogoKasa} ></img>
+        <img className="header__logo" src={LogoKasa} alt="Logo Kasa"></img>
       </Link>
 
       <nav className="navbar">
