@@ -1,0 +1,88 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60px;
+  @include mixins.mobile {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &__open {
+    height: 120px;
+    @include mixins.mobile {
+      height: auto;
+    }
+  }
+
+  &__button {
+    background-color: variables.$primary-color;
+    color: white;
+    padding: 13px;
+
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-radius: 5px;
+  }
+
+  &__icon-container {
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    font-size: large;
+    transition: transform 400ms;
+  }
+
+  &__icon-rotate {
+    transition: transform 400ms;
+    transform: rotate(-180deg);
+  }
+  
+  &__FicheLogement {
+    padding: 0;
+    list-style: none;
+  }
+
+  &__panel{
+    padding: 15px 15px 25px 15px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 12px;
+    background-color: variables.$grey_transparent;
+    transition: visibility 0.5s ease-in-out,
+                opacity 0.5s ease-in-out,
+                height 0.2s ease-in-out;
+  }
+
+  &__panelVisible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__panelHidden {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__list{
+    list-style: none;
+  }
+
+}
+
